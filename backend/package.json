@@ -1,0 +1,31 @@
+{
+  "name": "scalable-blink-detector",
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop ecosystem.config.js",
+    "worker": "node workers/frame-processor.worker.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.450.0",
+    "@aws-sdk/s3-request-presigner": "^3.450.0",
+    "@tensorflow-models/face-detection": "^1.0.2",
+    "@tensorflow/tfjs": "^4.22.0",
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "bcryptjs": "^3.0.3",
+    "bullmq": "^4.12.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "ioredis": "^5.3.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.3",
+    "pm2": "^5.3.0",
+    "sequelize": "^6.35.0",
+    "sharp": "^0.33.0",
+    "uuid": "^9.0.1",
+    "ws": "^8.14.2"
+  }
+}
